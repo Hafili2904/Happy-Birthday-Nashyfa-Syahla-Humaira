@@ -1,0 +1,386 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🤍Happy Birthday Nashyfa Syahla Humaira🤍</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background: linear-gradient(135deg,#ffb3d9,#ffd6e7,#d8d8d8);
+      min-height:100vh;
+      overflow-x:hidden;
+      color:rgb(0, 0, 0);
+    }
+
+    .container{
+      width:100%;
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:30px;
+    }
+
+    .card{
+      width:100%;
+      max-width:900px;
+      background:rgba(255,255,255,0.12);
+      backdrop-filter:blur(12px);
+      border-radius:30px;
+      padding:40px 30px;
+      text-align:center;
+      box-shadow:0 15px 40px rgba(0,0,0,0.15);
+      animation:fadeUp 1.5s ease;
+    }
+
+    h1{
+      font-family:'Pacifico',cursive;
+      font-size:3rem;
+      margin-bottom:10px;
+    }
+
+    .subtitle{
+      font-size:1.1rem;
+      opacity:0.95;
+      margin-bottom:30px;
+    }
+
+    .photo-box{
+      width:220px;
+      height:220px;
+      border:3px dashed rgba(255,255,255,0.7);
+      border-radius:25px;
+      margin:0 auto 25px;
+      overflow:hidden;
+      box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .photo-box img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .letter{
+      background:rgba(255,255,255,0.15);
+      border-radius:25px;
+      padding:25px;
+      text-align:left;
+      line-height:1.8;
+      font-size:1rem;
+      margin-bottom:25px;
+    }
+
+    .btn{
+      background:white;
+      color:#ff5fa2;
+      border:none;
+      padding:15px 30px;
+      border-radius:999px;
+      font-size:1rem;
+      font-weight:600;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      transform:scale(1.08);
+    }
+
+    .countdown-box,.music-box,.reasons-box{
+      margin-top:25px;
+      background:rgba(255,255,255,0.13);
+      border-radius:22px;
+      padding:20px;
+    }
+
+    .countdown-box h3,.reasons-box h3{
+      margin-bottom:12px;
+      font-size:1.1rem;
+    }
+
+    #countdown{
+      font-size:1rem;
+      line-height:1.7;
+    }
+
+    .reason{
+      background:rgba(255,255,255,0.12);
+      padding:14px;
+      border-radius:16px;
+      margin-top:10px;
+      transition:0.3s;
+    }
+
+    .reason:hover{
+      transform:translateY(-4px);
+    }
+
+    #secret{
+      display:none;
+      margin-top:25px;
+      font-size:1.1rem;
+      animation:fadeUp 1s ease;
+    }
+
+    .heart{
+      position:fixed;
+      color:white;
+      font-size:20px;
+      animation:fall linear infinite;
+      top:-20px;
+    }
+
+    @keyframes fall{
+      to{
+        transform:translateY(110vh);
+      }
+    }
+
+    @keyframes fadeUp{
+      from{
+        opacity:0;
+        transform:translateY(30px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    @media(max-width:600px){
+      body{
+        padding:15px 0;
+      }
+
+      h1{
+        font-size:2rem;
+        line-height:1.3;
+      }
+
+      .subtitle{
+        font-size:0.95rem;
+      }
+
+      .card{
+        padding:25px 16px;
+        border-radius:25px;
+      }
+
+      .photo-box{
+        width:170px;
+        height:170px;
+      }
+
+      .letter{
+        font-size:0.92rem;
+        padding:18px;
+        line-height:1.7;
+      }
+
+      .btn{
+        width:100%;
+        padding:14px;
+        font-size:0.95rem;
+      }
+
+      #secret{
+        font-size:1rem;
+      }
+    }
+
+      .card{
+        padding:30px 20px;
+      }
+      #loadingScreen{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:linear-gradient(135deg,#ffb3d9,#ffd6e7,#d8d8d8);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:99999;
+  transition:1s;
+}
+
+#loadingScreen.hide{
+  opacity:0;
+  visibility:hidden;
+}
+
+.loading-content{
+  text-align:center;
+  color:white;
+  padding:20px;
+}
+
+.loading-heart{
+  font-size:4rem;
+  margin-bottom:15px;
+  animation:heartbeat 1s infinite;
+}
+
+.loading-content h2{
+  font-family:'Pacifico',cursive;
+  margin-bottom:10px;
+}
+
+.loading-bar{
+  width:250px;
+  max-width:80vw;
+  height:12px;
+  background:rgba(255,255,255,0.3);
+  border-radius:999px;
+  overflow:hidden;
+  margin:20px auto 0;
+}
+
+.loading-fill{
+  width:0%;
+  height:100%;
+  background:white;
+  border-radius:999px;
+  animation:loading 3s forwards;
+}
+
+@keyframes heartbeat{
+  0%,100%{transform:scale(1);}
+  50%{transform:scale(1.15);}
+}
+
+@keyframes loading{
+  from{width:0%;}
+  to{width:100%;}
+}
+    
+  </style>
+</head>
+<body>
+<div id="loadingScreen">
+  <div class="loading-content">
+    <div class="loading-heart">🤍</div>
+    <h2>Bentar yaa adikicik...</h2>
+    <p>Aku lagi nyiapin sesuatu yang spesial buat kamu ✨</p>
+
+    <div class="loading-bar">
+      <div class="loading-fill"></div>
+    </div>
+  </div>
+</div>
+  <div class="container">
+    <div class="card">
+      <h1>❤️ Selamat Ulang Tahun Adikicik ❤️</h1>
+
+      <p class="subtitle">
+        Untuk Nashyfa Syahla Humaira, cewek paling lucu, paling gemes, dan paling spesial di hidup aku.
+      </p>
+
+      <div class="photo-box">
+        <img id="couplePhoto" src="adikicik.jpeg" alt="Foto Aku dan Adikicik">
+      </div>
+
+      <div class="letter">
+        Hai adikicikkk,
+        <br><br>
+        Selamat ulang tahun yaa sayangg. Hari ini dunia lagi beruntung banget karena beberapa tahun lalu kamu lahir dan akhirnya sekarang aku bisa kenal sama kamu.
+        <br><br>
+        Makasih udah selalu ada, udah selalu bikin aku senyum, bikin hari-hari aku jadi lebih seru, dan bikin aku ngerasa jadi orang paling beruntung karena punya kamu.
+        <br><br>
+        Maaf ya kalau aku masih sering nyebelin, bikin kamu kesel, atau bikin kamu capek. Tapi satu hal yang ga pernah berubah: aku bakal selalu sayang sama adikicik.
+        <br><br>
+        Aku harap di umur kamu yang sekarang, semua hal baik dateng ke kamu. Semoga kamu selalu sehat, bahagia, dimudahin semua urusannya, dan semoga aku masih boleh nemenin kamu terus sampai nanti.
+        <br><br>
+        Pokoknya hari ini harus bahagiaa, soalnya ini harinya cewek tercantik seduniaa ❤️
+      </div>
+
+      <button class="btn" onclick="showSecret()">Pencet Ini Dongg</button>
+
+      <div id="secret">
+        Aku sayang banget sama adikicik lebih dari apapun ❤️
+        <br><br>
+        <span id="typedMessage"></span>
+            <div class="countdown-box">
+        <h3>Sudah Seberapa Lama Aku Sayang Adikicik? 🤍</h3>
+        <p id="countdown">Loading...</p>
+      </div>
+
+      <div class="music-box">
+        <p>Lagu buat adikicik 🎵</p>
+        <audio controls style="width:100%; margin-top:10px; border-radius:20px;">
+          <source src="lagu-adikicik.mp3" type="audio/mpeg">
+          Browser kamu ga support audio.
+        </audio>
+        <p style="font-size:0.85rem; opacity:0.8; margin-top:10px;">
+        
+        </p>
+      </div>
+
+      <div class="reasons-box">
+        <h3>3 Alasan Kenapa Aku Sayang Adikicik</h3>
+        <div class="reason">🤍 Karena cuma adikicik yang bisa bikin hari aku jadi jauh lebih bahagia.</div>
+        <div class="reason">🤍 Karena adikicik lucu banget, apalagi pas lagi ngambek dikit.</div>
+        <div class="reason">🤍 Karena aku ga pernah ngebayangin hidup aku tanpa adikicik.</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showSecret(){
+      document.getElementById('secret').style.display='block';
+
+      const text = 'Kalau bisa, aku pengen nemenin semua ulang tahun adikicik sampai tua nanti 🤍';
+      let i = 0;
+      const target = document.getElementById('typedMessage');
+      target.innerHTML='';
+
+      const interval = setInterval(() => {
+        target.innerHTML += text.charAt(i);
+        i++;
+        if(i >= text.length){
+          clearInterval(interval);
+        }
+      }, 45);
+    }
+
+    const startDate = new Date('2025-12-25');
+    const now = new Date();
+    const diff = now - startDate;
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+
+    document.getElementById('countdown').innerHTML =
+      days + ' hari ' + hours + ' jam sejak aku mulai sayang sama adikicik.';
+
+    for(let i=0;i<30;i++){
+      const heart=document.createElement('div');
+      heart.className='heart';
+      heart.innerHTML='🤍';
+      heart.style.left=Math.random()*100+'vw';
+      heart.style.animationDuration=(Math.random()*5+5)+'s';
+      heart.style.fontSize=(Math.random()*15+15)+'px';
+      document.body.appendChild(heart);
+    }
+    setTimeout(() => {
+  document.getElementById('loadingScreen').classList.add('hide');
+}, 3200);
+  </script>
+
+</body>
+</html>
+```
